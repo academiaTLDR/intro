@@ -9,6 +9,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
         
+        /* 加入平滑滾動，讓錨點點擊時有滑動效果 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #f0f9ff; /* Lightest Blue */
+            color: #0f172a; /* Slate 900 */
+        }
+
         body {
             font-family: 'Inter', 'Noto Sans TC', sans-serif;
             background-color: #f0f9ff; /* Lightest Blue */
@@ -79,8 +90,24 @@
                 <span class="bg-rose-500 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg">安全代理層</span>
             </div>
             
-            <!-- 頂部入口按鈕 -->
-            <div class="mt-10">
+            <!-- 頂部入口與錨點按鈕 -->
+            <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6">
+                <!-- <a href="#core-highlights" class="inline-flex items-center gap-2 bg-sky-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 hover:bg-sky-400 hover:shadow-2xl transition-all duration-300 ring-4 ring-sky-500/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                    <span>快速跳至：AI 核心亮點</span>
+                </a>  -->
+                <a href="#core-highlights" 
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 
+                    text-white px-8 py-4 rounded-full font-bold text-lg 
+                    shadow-xl hover:scale-105 hover:shadow-2xl 
+                    transition-all duration-300 ring-4 ring-purple-400/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                        <span>快速跳至「AI 核心亮點」</span>
+                    </a>
                 <a href="https://cibs-astldr.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-blue-800 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 hover:bg-sky-50 hover:shadow-2xl transition-all duration-300 ring-4 ring-blue-500/30">
                     <span>🚀 立即體驗實際系統</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -205,8 +232,89 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Section 3: TLDR intro -->
+        <section id="core-highlights" class="relative bg-white rounded-3xl shadow-xl p-8 md:p-16 overflow-hidden border border-slate-100">
+            <!-- 裝飾用背景圓圈 -->
+            <div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-50 rounded-full blur-3xl opacity-50 z-0"></div>
+            <div class="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-[30rem] h-[30rem] bg-fuchsia-50 rounded-full blur-3xl opacity-50 z-0"></div>
+            
+            <div class="relative z-10 mb-16 text-center">
+                <span class="inline-block bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white px-5 py-2 rounded-full text-xl font-bold tracking-widest mb-6">自動摘要 × 智慧推薦</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6">讓每一篇論文，都能在 60 秒內讀懂</h2>
+                <p class="text-slate-600 max-w-4xl mx-auto text-xl leading-relaxed text-left">
+                    讓 AI 在系統建置階段，就把論文「全部讀完」。它會產出兩種深度摘要：一種給專業研究者，一種給沒有背景的人。同時建立語意向量與知識關聯，讓每篇文章都能自動推薦最相關的研究。沒有即時運算壓力，沒有資料庫依賴，前端打開的瞬間，就是整理好的智慧知識網絡。
+                </p>
+            </div>
 
-        <!-- Section 3: Data Composition & Strategy -->
+            <!-- 特色 1：巨型區塊展示 -->
+            <div class="relative z-10 flex flex-col lg:flex-row items-center gap-12 mb-20 bg-slate-50 p-10 rounded-3xl border-l-8 border-indigo-500">
+                <div class="w-full lg:w-1/3 flex justify-center">
+                    <div class="text-9xl">🤖</div>
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-4">自動化「雙模式」文獻導讀 (TLDR)</h3>
+                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                        運用先進生成式 AI，將動輒數十頁的艱澀論文瞬間轉化為結構化、易於閱讀的 Markdown 導讀檔案。並針對不同受眾自動產出兩種深度的內容，同時內建「格式驗證」，以確保TLDR品質：
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="bg-indigo-100 text-indigo-700 p-2 rounded-lg text-xl">🔬</span>
+                                <h4 class="text-xl font-bold text-slate-800">專業技術模式 (Tech)</h4>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed">
+                                專為領域專家量身打造。以極度客觀、嚴謹的視角，精準萃取文獻的「核心貢獻」與「研究侷限」，並強制要求 AI 高亮標示所有關鍵數據指標 (如樣本數 N、p值、效應量)，讓研究員能在一分鐘內掌握論文的學術價值。
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="bg-amber-100 text-amber-700 p-2 rounded-lg text-xl">☕</span>
+                                <h4 class="text-xl font-bold text-slate-800">白話科普模式 (Ess)</h4>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed">
+                                打破知識高牆，專為非本科系大眾設計。系統會自動過濾生硬的學術黑話 (如異質性、內生性)，並強制轉換為「排隊買珍奶」、「百貨打折」等生活化直覺比喻。讓任何人都能零門檻吸收前沿的學術知識。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 特色 2：巨型區塊展示 -->
+            <div class="relative z-10 flex flex-col lg:flex-row-reverse items-center gap-12 bg-slate-50 p-10 rounded-3xl border-r-8 border-fuchsia-500">
+                <div class="w-full lg:w-1/3 flex justify-center">
+                    <div class="text-9xl">🔗</div>
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-4">無資料庫的「語意推薦引擎」</h3>
+                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                        打破傳統關聯式資料庫 (RDB) 的包袱，系統在靜態建置階段便完成了全域的知識網絡串聯。藉由高階語意分析，找出看似不相關但概念相通的研究，並將結果直接寫入前端介面，達成「零即時運算成本」的精準推薦。
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="bg-fuchsia-100 text-fuchsia-700 p-3 rounded-xl text-2xl mt-1">📊</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 mb-2">高維度向量化 (Embeddings)</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    系統自動掃描所有文獻的學術標籤與核心摘要，並運用 Embedding 模型，將純文字特徵轉換為高達 768 維的數學語意向量。這不僅僅是呆板的關鍵字比對，更是對整份文獻「底層概念與脈絡」的深度理解。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="bg-pink-100 text-pink-700 p-3 rounded-xl text-2xl mt-1">📐</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 mb-2">餘弦相似度矩陣 (Cosine Similarity)</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    在獲取全庫文獻的語意向量後，系統會執行龐大的一對多矩陣運算。精準篩選出語意距離最近、關聯度最高的前 5 篇文獻，並將推薦連結無縫且靜態地整合至使用者的 Markdown 閱讀介面中。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Data Composition & Strategy -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Text Content -->
             <div class="flex flex-col justify-center">
@@ -231,7 +339,7 @@
             </div>
         </section>
 
-        <!-- Section 4: Performance Comparison -->
+        <!-- Section 5: Performance Comparison -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-row-reverse">
             <!-- Chart: Performance -->
             <div class="flex flex-col items-center md:order-1">
@@ -264,7 +372,7 @@
             </div>
         </section>
 
-        <!-- Section 5: User Journey (Timeline) -->
+        <!-- Section 6: User Journey (Timeline) -->
         <section>
             <div class="mb-10 text-center">
                 <h2 class="text-3xl font-bold text-slate-800 mb-4">使用者互動流程</h2>
